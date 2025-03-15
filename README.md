@@ -1,7 +1,5 @@
 # Live Threat Intelligence Feed
 
-![Threat Intelligence Dashboard](https://your-image-url.com)
-
 ## 🚀 Project Overview
 The **Live Threat Intelligence Feed** is a real-time threat monitoring system that collects, analyzes, and displays malicious IPs, domains, and URLs. It integrates public threat feeds to provide up-to-date intelligence, helping SOC analysts and penetration testers track potential security threats.
 
