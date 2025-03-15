@@ -61,13 +61,6 @@ The **Live Threat Intelligence Feed** is a real-time threat monitoring system th
 - **Machine Learning-based Threat Scoring**
 - **SIEM Integration (Splunk, Elastic Security, etc.)**
 - **Multi-user Authentication & Role-Based Access**
-
-## 🤝 Contributing
-Pull requests are welcome! Feel free to enhance the project by adding new threat sources or improving the dashboard.
-
-## 📜 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
 
 🔍 **Built for SOC Analysts & Pen Testers to streamline real-time threat tracking!**
