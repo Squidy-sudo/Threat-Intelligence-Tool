@@ -1,71 +1,74 @@
-# Threat Intelligence Tool
+# Live Threat Intelligence Feed
 
-A real-time threat intelligence system to track and analyze malicious IPs, domains, and URLs using public threat feeds.
+![Threat Intelligence Dashboard](https://your-image-url.com)
 
-## Features
-- **Live Threat Monitoring**: Fetches threat intelligence data from AlienVault OTX and AbuseIPDB.
-- **Flask-based Web Dashboard**: View results on a webpage instead of the terminal.
-- **Automated Updates**: Retrieves fresh data from threat feeds.
-- **Potential Firewall Integration**: Can be extended to automate security responses.
+## 🚀 Project Overview
+The **Live Threat Intelligence Feed** is a real-time threat monitoring system that collects, analyzes, and displays malicious IPs, domains, and URLs. It integrates public threat feeds to provide up-to-date intelligence, helping SOC analysts and penetration testers track potential security threats.
 
-## Installation & Setup
-### Prerequisites
-- Install **Python 3.10+**
-- Install **Git**
+## 🔥 Key Features
+- **Automated Threat Data Ingestion** – Fetches data from **AlienVault OTX, AbuseIPDB**.
+- **Flask-Based Web Dashboard** – Real-time monitoring of active threats with historical analysis.
+- **Threat Scoring & Analysis** – Assigns risk scores to track potential threats.
+- **SQLite Database** – Lightweight and efficient storage for threat logs.
+- **API Integration** – Can be extended to interact with **firewalls, SIEMs, and SOAR tools**.
+- **Potential Firewall Rule Integration** – Helps automate threat blocking mechanisms.
 
-### Clone the Repository
-```sh
-git clone https://github.com/Squidy-sudo/Threat-Intelligence-Tool.git
-cd Threat-Intelligence-Tool
-```
+## 📌 Tech Stack
+- **Backend:** Flask (Python)
+- **Database:** SQLite
+- **API Integration:** REST APIs (AlienVault OTX, AbuseIPDB)
+- **Frontend:** HTML/CSS (Flask Templates)
 
-### Set Up a Virtual Environment (Recommended)
-```sh
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
-```
+## 🛠️ Installation & Setup
 
-### Install Dependencies
-```sh
-pip install -r requirements.txt
-```
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/yourusername/threat-intel-feed.git
+   cd threat-intel-feed
+   ```
 
-## Running the Application
-```sh
-python app.py
-```
-Then, open your browser and go to `http://127.0.0.1:5000/`.
+2. **Create a Virtual Environment (Optional but Recommended):**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-## GitHub Configuration & Push Instructions
-### **1️⃣ Set Up Your Git Identity**
-```sh
-git config --global user.email "your-email@example.com"
-git config --global user.name "Your Name"
-```
-Check if it worked:
-```sh
-git config --global --list
-```
+3. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### **2️⃣ Commit Your Changes**
-```sh
-git add .
-git commit -m "Initial commit - Threat Intelligence Tool"
-```
+4. **Set API Keys (AlienVault OTX, AbuseIPDB)**
+   - Create a `.env` file in the project root and add:
+     ```env
+     OTX_API_KEY=your_otx_api_key
+     ABUSEIPDB_API_KEY=your_abuseipdb_api_key
+     ```
+   **Note:** The `.env` file is ignored by Git (via `.gitignore`). Do not share your API keys.
 
-### **3️⃣ Push to GitHub**
-```sh
-git branch -M main
-git push -u origin main
-```
-✅ **Your project should now be on GitHub!** 🎉  
+5. **Run the Application:**
+   ```bash
+   python app.py
+   ```
+   The app will be accessible at `http://127.0.0.1:5000`.
 
-## Future Enhancements
-- Add **historical data analysis**.
-- Improve UI with interactive charts.
-- Enable **email alerts** for detected threats.
-- Develop **firewall integration** for automatic blocking.
+## 📊 Usage
+- View live threat intelligence data on the Flask dashboard.
+- Filter by IP, domain, or URL to analyze specific threats.
+- Extend functionality by integrating firewall rules for automated blocking.
+
+## 🚀 Future Enhancements
+- **Machine Learning-based Threat Scoring**
+- **SIEM Integration (Splunk, Elastic Security, etc.)**
+- **Multi-user Authentication & Role-Based Access**
+
+## 🤝 Contributing
+Pull requests are welcome! Feel free to enhance the project by adding new threat sources or improving the dashboard.
+
+## 📜 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-Let me know if you need any tweaks! 🚀
+
+🔍 **Built for SOC Analysts & Pen Testers to streamline real-time threat tracking!**
 
