@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threat Intelligence Lookup</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        form { margin-top: 20px; }
+        input { padding: 10px; width: 250px; }
+        button { padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <h1>Threat Intelligence Lookup</h1>
+    <form action="/check" method="post">
+        <input type="text" name="ip" placeholder="Enter IP Address" required>
+        <button type="submit">Check Threat</button>
+    </form>
+</body>
+</html>

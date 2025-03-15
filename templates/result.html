@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threat Intelligence Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        .container { max-width: 800px; margin: auto; text-align: left; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f4f4f4; }
+        .section-title { margin-top: 20px; font-size: 1.2em; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Threat Intelligence Results for {{ ip }}</h1>
+    <div class="container">
+        
+        <h2 class="section-title">AlienVault OTX Data</h2>
+        <table>
+            <tr><th>Country</th><td>{{ otx_data.get('country_name', 'N/A') }}</td></tr>
+            <tr><th>ASN</th><td>{{ otx_data.get('asn', 'N/A') }}</td></tr>
+            <tr><th>Reputation Score</th><td>{{ otx_data.get('reputation', 'N/A') }}</td></tr>
+            <tr><th>Latitude</th><td>{{ otx_data.get('latitude', 'N/A') }}</td></tr>
+            <tr><th>Longitude</th><td>{{ otx_data.get('longitude', 'N/A') }}</td></tr>
+            <tr><th>WHOIS Lookup</th><td><a href="{{ otx_data.get('whois', '#') }}" target="_blank">View WHOIS</a></td></tr>
+        </table>
+        
+        <h2 class="section-title">AbuseIPDB Data</h2>
+        <table>
+            <tr><th>ISP</th><td>{{ abuseipdb_data['data'].get('isp', 'N/A') }}</td></tr>
+            <tr><th>Domain</th><td>{{ abuseipdb_data['data'].get('domain', 'N/A') }}</td></tr>
+            <tr><th>Country</th><td>{{ abuseipdb_data['data'].get('countryCode', 'N/A') }}</td></tr>
+            <tr><th>Confidence Score</th><td>{{ abuseipdb_data['data'].get('abuseConfidenceScore', 'N/A') }}</td></tr>
+            <tr><th>Total Reports</th><td>{{ abuseipdb_data['data'].get('totalReports', 'N/A') }}</td></tr>
+            <tr><th>Last Reported</th><td>{{ abuseipdb_data['data'].get('lastReportedAt', 'N/A') }}</td></tr>
+        </table>
+        
+        <a href="/">Check another IP</a>
+    </div>
+</body>
+</html>
